@@ -22,7 +22,7 @@ function App() {
   async function reviewCode() {
     setLoading(true); // Set loading to true when the review starts
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code });
+      const response = await axios.post("https://code-review-20h7.onrender.com/ai/get-review", { code });
       setRev(response.data);
     } catch (error) {
       console.error(error);
