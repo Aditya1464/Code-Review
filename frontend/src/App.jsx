@@ -27,7 +27,7 @@ function App() {
   async function reviewCode() {
     setLoading(true);
     try {
-      const response = await axios.post("https://code-review-backend-3ig7.onrender.com/", { code });
+      const response = await axios.post("https://code-review-backend-3ig7.onrender.com/ai/get-review", { code });
       setRev(response.data);
     } catch (error) {
       console.error(error);
